@@ -1,5 +1,3 @@
-
-
 #' @title Clear the global environment
 #'
 #' @description A function to quickly clear the global environment from the
