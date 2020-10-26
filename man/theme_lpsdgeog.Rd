@@ -4,7 +4,7 @@
 \alias{theme_lpsdgeog}
 \title{{ggplot2} theme for blog posts}
 \usage{
-theme_lpsdgeog()
+theme_lpsdgeog(subtitle = FALSE)
 }
 \description{
 A theme for {ggplot2} charts for my personal blog

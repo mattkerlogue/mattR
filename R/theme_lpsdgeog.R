@@ -7,20 +7,13 @@
 
 #' @import ggplot2
 
-theme_lpsdgeog <- function() {
-  theme_void() +
+theme_lpsdgeog <- function(subtitle = FALSE) {
+  t <- theme_void() +
     theme(
       text = element_text(
         family = "Hack",
         colour = "grey40",
         margin = margin(6, 6, 6, 6, "pt")
-      ),
-      plot.title = element_text(
-        face = "bold",
-        hjust = 1,
-        size = 12,
-        margin = margin(6, 6, 6, 6, "pt"),
-        vjust = 2
       ),
       axis.title.x = element_text(
         hjust = 1,
@@ -39,4 +32,37 @@ theme_lpsdgeog <- function() {
       panel.grid = element_line(colour = "grey90"),
       plot.margin = margin(6, 6, 6, 6, "pt")
     )
+
+  if (subtitle) {
+    t <- t + theme(
+      plot.title = element_text(
+        face = "bold",
+        hjust = 1,
+        size = 12,
+        margin = margin(6, 6, 3, 6, "pt"),
+        vjust = 0,
+        lineheight = 1.1
+        ),
+      plot.subtitle = element_text(
+        hjust = 1,
+        size = 8,
+        margin = margin(3, 6, 12, 6, "pt"),
+        vjust = 1
+    )
+    )
+  } else {
+    t <- t + theme(
+      plot.title = element_text(
+        face = "bold",
+        hjust = 1,
+        size = 12,
+        margin = margin(6, 6, 12, 6, "pt"),
+        vjust = 1,
+        lineheight = 1.1
+      )
+    )
+  }
+
+  return(t)
+
 }
