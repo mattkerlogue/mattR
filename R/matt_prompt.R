@@ -30,6 +30,18 @@ matt_prompt <- function(...) {
 
   if (length(git_branch) != 0) {
     git_msg <- paste0(" @", git_branch)
+    git_status <- suppressWarnings(system("git status -s",
+                                          ignore.stderr = TRUE, intern = TRUE))
+    git_ahead <- suppressWarnings(system("git status -sb",
+                                         ignore.stderr = TRUE, intern = TRUE))
+    git_ahead_chk <- grepl("ahead", git_ahead)
+
+    if (length(git_status) != 0) {
+      git_msg <- paste0(git_msg, " ✘")
+    } else if (git_ahead_chk) {
+      git_msg <- paste0(git_msg, " ⬆︎")
+    }
+
   } else {
     git_msg <- ""
   }
