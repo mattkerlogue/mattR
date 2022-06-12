@@ -1,6 +1,10 @@
 #' Customised R prompt
 #'
-#' A function for use in an .Rprofile to update the R console prompt
+#' A function for use in an .Rprofile to update the R console prompt.
+#'
+#' Add the following to the .First() function in your .Rprofile file:
+#'   mattR::matt_prompt()
+#'   addTaskCallback(mattR::matt_prompt)
 #'
 #' @export
 matt_prompt <- function(...) {
