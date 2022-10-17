@@ -2,7 +2,7 @@
 % Please edit documentation in R/close_all.R
 \name{close_all}
 \alias{close_all}
-\title{Close all open source files}
+\title{Close all open source files in RStudio}
 \usage{
 close_all()
 }
@@ -10,5 +10,6 @@ close_all()
 invisibly the number of windows closed
 }
 \description{
-Close all open source files
+This isn't necessary as is covered by an in-built function
+within the RStudio IDE and can be called by `cmd`+`shift`+`w` on Mac.
 }
