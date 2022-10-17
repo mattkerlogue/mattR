@@ -1,0 +1,5 @@
+Name: Close all
+Description: Close all source editors
+Binding: close_all
+Interactive: false
+
