@@ -8,9 +8,10 @@ Description: Simple functions that make it easier for me to use R.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.1
+RoxygenNote: 7.3.1
 Imports: 
     cli,
+    fs,
     ggplot2,
     here,
     rstudioapi

@@ -3,5 +3,6 @@
 export(clear_global)
 export(close_all)
 export(matt_prompt)
+export(new_file)
 export(theme_lpsdgeog)
 import(ggplot2)
