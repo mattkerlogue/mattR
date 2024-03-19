@@ -4,14 +4,26 @@
 \alias{new_file}
 \title{Create new files}
 \usage{
-new_file(path, open = TRUE, template = NULL)
+new_file(
+  path,
+  open = TRUE,
+  template = NULL,
+  create_dir = TRUE,
+  overwrite = NULL
+)
 }
 \arguments{
 \item{path}{Path of the file to create.}
 
 \item{open}{If `TRUE` (the default) open the file.}
 
-\item{template}{A template file to copy}
+\item{template}{A template file to copy.}
+
+\item{create_dir}{If `TRUE` (the default) will create missing directories.}
+
+\item{overwrite}{When `NULL` (the default) will warn and prompt the user if
+attempting to overwrite, set to `TRUE` to force overwrite or `FALSE` to
+not overwrite.}
 }
 \value{
 The path to the new file (invisibly).
