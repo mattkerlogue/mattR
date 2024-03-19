@@ -4,7 +4,7 @@
 \alias{matt_prompt}
 \title{Customised R prompt}
 \usage{
-matt_prompt(...)
+matt_prompt()
 }
 \description{
 A function for use in an .Rprofile to update the R console prompt.

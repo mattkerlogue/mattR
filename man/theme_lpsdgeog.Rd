@@ -6,6 +6,9 @@
 \usage{
 theme_lpsdgeog(subtitle = FALSE)
 }
+\arguments{
+\item{subtitle}{Whether the plot has a subtitle}
+}
 \description{
 A theme for {ggplot2} charts for my personal blog
 }

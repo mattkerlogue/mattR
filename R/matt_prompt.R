@@ -7,7 +7,7 @@
 #'   addTaskCallback(mattR::matt_prompt)
 #'
 #' @export
-matt_prompt <- function(...) {
+matt_prompt <- function() {
 
   proj_path <- here::here()
   my_loc <- getwd()

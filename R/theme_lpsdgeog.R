@@ -4,7 +4,8 @@
 #'
 #' @export
 #'
-
+#' @param subtitle Whether the plot has a subtitle
+#'
 #' @import ggplot2
 
 theme_lpsdgeog <- function(subtitle = FALSE) {
