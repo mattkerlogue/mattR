@@ -1,6 +1,6 @@
-#' @title {ggplot2} theme for blog posts
+#' @title `ggplot2` theme for blog posts
 #'
-#' @description A theme for {ggplot2} charts for my personal blog
+#' @description A theme for `ggplot2` charts for my personal blog
 #'
 #' @export
 #'

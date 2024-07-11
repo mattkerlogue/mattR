@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_lpsdgeog.R
 \name{theme_lpsdgeog}
 \alias{theme_lpsdgeog}
-\title{{ggplot2} theme for blog posts}
+\title{`ggplot2` theme for blog posts}
 \usage{
 theme_lpsdgeog(subtitle = FALSE)
 }
@@ -10,5 +10,5 @@ theme_lpsdgeog(subtitle = FALSE)
 \item{subtitle}{Whether the plot has a subtitle}
 }
 \description{
-A theme for {ggplot2} charts for my personal blog
+A theme for `ggplot2` charts for my personal blog
 }
