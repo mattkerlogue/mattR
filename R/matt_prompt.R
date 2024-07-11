@@ -41,9 +41,9 @@ matt_prompt <- function() {
     git_ahead_chk <- grepl("ahead", git_ahead)
 
     if (length(git_status) != 0) {
-      git_msg <- paste0(git_msg, " ✘")
+      git_msg <- paste0(git_msg, " \u2718")
     } else if (git_ahead_chk) {
-      git_msg <- paste0(git_msg, " ⬆︎")
+      git_msg <- paste0(git_msg, " \u2b06")
     }
 
   } else {
