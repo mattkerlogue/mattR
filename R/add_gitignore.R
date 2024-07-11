@@ -84,7 +84,7 @@ add_quarto_ignores <- function(gitignore = NULL) {
 
   if (gi_detect > 0) {
     cli::cli_abort(c(
-      x = "quarto already detected in gitignore",
+      x = "quarto already detected in gitignore"
     ))
   }
 
