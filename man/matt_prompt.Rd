@@ -2,15 +2,20 @@
 % Please edit documentation in R/matt_prompt.R
 \name{matt_prompt}
 \alias{matt_prompt}
+\alias{init_prompt}
 \title{Customised R prompt}
 \usage{
 matt_prompt()
+
+init_prompt()
 }
 \description{
 A function for use in an .Rprofile to update the R console prompt.
 }
 \details{
-Add the following to the .First() function in your .Rprofile file:
-  mattR::matt_prompt()
-  addTaskCallback(mattR::matt_prompt)
+Add the following code to the .First() function in your .Rprofile file:
+  ```mattR::matt_prompt()
+  addTaskCallback(mattR::matt_prompt)```
+
+Positron does not properly support `.First()`, in which case use `init_prompt()`
 }
