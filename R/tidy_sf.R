@@ -9,10 +9,11 @@
 #' format.
 #'
 #' @param x An `sf::st_sf()` object
+#' @param .make_valid Whether to run `sf::st_make_valid()`
 #' @param .verbose Whether to be noisy in checks
 #'
 #' @export
-tidy_sf <- function(x, .verbose = FALSE) {
+tidy_sf <- function(x, .make_valid = TRUE, .verbose = FALSE) {
   if (!inherits(x, "sf")) {
     cli::cli_abort(
       c("x" = "{.arg x} must be a simple features object")
@@ -32,7 +33,13 @@ tidy_sf <- function(x, .verbose = FALSE) {
     return(invisible(NULL))
   }
 
-  sf::st_as_sf(tibble::as_tibble(x))
+  y <- sf::st_as_sf(tibble::as_tibble(x))
+
+  if (.make_valid) {
+    return(sf::st_make_valid(y))
+  } else {
+    return(y)
+  }
 }
 
 #' Quicker counting of sf objects

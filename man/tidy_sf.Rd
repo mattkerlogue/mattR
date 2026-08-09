@@ -4,10 +4,12 @@
 \alias{tidy_sf}
 \title{Coerce sf data frames into tibbles}
 \usage{
-tidy_sf(x, .verbose = FALSE)
+tidy_sf(x, .make_valid = TRUE, .verbose = FALSE)
 }
 \arguments{
 \item{x}{An `sf::st_sf()` object}
+
+\item{.make_valid}{Whether to run `sf::st_make_valid()`}
 
 \item{.verbose}{Whether to be noisy in checks}
 }
