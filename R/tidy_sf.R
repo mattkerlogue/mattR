@@ -26,11 +26,11 @@ tidy_sf <- function(x, .make_valid = TRUE, .verbose = FALSE) {
     )
   }
 
-  if (tibble::is_tibble(x)) {
+  if (inherits(x, "tbl_df")) {
     if (.verbose) {
       cli::cli_alert_info("{.arg x} is already a tibble, no action taken")
     }
-    return(invisible(NULL))
+    return(x)
   }
 
   y <- sf::st_as_sf(tibble::as_tibble(x))
